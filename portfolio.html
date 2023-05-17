@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<title>Portfolio</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		body {
 			margin: 0;
@@ -65,35 +65,80 @@
 			text-align: center;
 		}
 
-		.fa {
-			padding: 10px;
-			font-size: 30px;
-			width: 50px;
-			text-align: center;
+		.project-list {
+			list-style-type: none;
+			padding: 0;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-gap: 20px;
+		}
+
+		.project-item {
+			background-color: #f2f2f2;
+			padding: 20px;
+			border-radius: 5px;
+		}
+
+		.project-title {
+			font-size: 18px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		.project-description {
+			margin-bottom: 10px;
+		}
+
+		.project-link {
+			display: inline-block;
+			color: #333;
 			text-decoration: none;
-			margin: 5px 2px;
-			border-radius: 50%;
+			margin-top: 10px;
 		}
 
-		.fa:hover {
-			opacity: 0.7;
+		.project-link:hover {
+			text-decoration: underline;
 		}
 
-		.fa-linkedin {
-			background: #007bb5;
-			color: white;
-		}
-
-		.fa-github {
-			background: #333;
-			color: white;
+		.fa-github:before {
+			content: "\f09b";
+			font-family: "FontAwesome";
 		}
 	</style>
-    <title>Benjamin Lee's Portfolio</title>
-  </head>
-  <body>
-    <h1>My Portfolio</h1>
-    <p>Welcome to my portfolio! Below you can find a link to view my portfolio in PDF format.</p>
-    <a href="https://github.com/ze11ow/benjamSite/main/blob/Benjamin_Lee_MASTER_Project_Portfolio.pdf" target="_blank">View PDF Portfolio</a>
-  </body>
+</head>
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="portfolio.html">Portfolio</a></li>
+				<li><a href="contact.html">Contact</a></li>
+			</ul>
+		</nav>
+	</header>
+	<main>
+		<h1>Portfolio</h1>
+		<section>
+			<ul class="project-list">
+				<li class="project-item">
+					<h2 class="project-title">Project 1</h2>
+					<p class="project-description">Description of project 1.</p>
+					<a href="#" class="project-link"><i class="fa fa-github"></i> GitHub</a>
+				</li>
+				<li class="project-item">
+					<h2 class="project-title">Project 2</h2>
+					<p class="project-description">Description of project 2.</p>
+					<a href="#" class="project-link"><i class="fa fa-github"></i> GitHub</a>
+				</li>
+				<li class="project-item">
+					<h2 class="project-title">Project 3</h2>
+					<p class="project-description">Description of project 3.</p>
+					<a href="#" class="project-link"><i class="fa fa-github"></i> GitHub</a>
+				</li>
+				<!-- Add more projects here -->
+			</ul>
+		</section>
+	</main>
+</body>
 </html>
