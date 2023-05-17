@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Contact Me</title>
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<style>
 		body {
 			margin: 0;
@@ -65,28 +65,55 @@
 			text-align: center;
 		}
 
-		.fa {
-			padding: 10px;
-			font-size: 30px;
-			width: 50px;
-			text-align: center;
-			text-decoration: none;
-			margin: 5px 2px;
-			border-radius: 50%;
+		.contact-list {
+			list-style-type: none;
+			padding: 0;
 		}
 
-		.fa:hover {
+		.contact-list li {
+			margin-bottom: 20px;
+		}
+
+		.contact-list li a {
+			display: inline-block;
+			color: #333;
+			text-decoration: none;
+			padding-left: 35px;
+			position: relative;
+		}
+
+		.contact-list li a:before {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 30px;
+			height: 30px;
+			border-radius: 50%;
+			background-color: #333;
+			color: white;
+			line-height: 30px;
+			text-align: center;
+		}
+
+		.contact-list li a:hover:before {
 			opacity: 0.7;
 		}
 
-		.fa-linkedin {
-			background: #007bb5;
-			color: white;
+		.email:before {
+			content: "\f0e0";
+			font-family: "FontAwesome";
 		}
 
-		.fa-github {
-			background: #333;
-			color: white;
+		.linkedin:before {
+			content: "\f08c";
+			font-family: "FontAwesome";
+		}
+
+		.fa-github:before {
+			content: "\f09b";
+			font-family: "FontAwesome";
 		}
 	</style>
 </head>
@@ -96,7 +123,7 @@
 			<ul>
 				<li><a href="index.html">Home</a></li>
 				<li><a href="about.html">About</a></li>
-        <li><a href="#">Portfolio</a></li>
+				<li><a href="#">Portfolio</a></li>
 				<li><a href="contact.html">Contact</a></li>
 			</ul>
 		</nav>
@@ -104,9 +131,10 @@
 	<main>
 		<h1>Contact Me</h1>
 		<p>You can reach me by:</p>
-		<ul>
-			<li>Email: <a href="mailto:BenL25846@gmail.com">BenL25846@gmail.com target="_blank"></a></li>
-			<li>LinkedIn: <a href="https://www.linkedin.com/in/benjamlee/">Benjamin Lee target="_blank"></a></li>
+		<ul class="contact-list">
+			<li><a href="mailto:BenL25846@gmail.com" class="email">BenL25846@gmail.com</a></li>
+			<li><a href="https://www.linkedin.com/in/benjamlee/" class="linkedin">LinkedIn</a></li>
+			<li><a href="#" class="fa fa-github"></a></li>
 		</ul>
 	</main>
 </body>
