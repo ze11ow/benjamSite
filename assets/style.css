@@ -100,7 +100,8 @@ body::before {
 }
 
 .image-slideshow {
-  max-width: 1000px;
+  max-width: 600px;
+  max-height: 400px;
   position: relative;
   margin: auto;
 }
