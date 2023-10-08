@@ -1,219 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Benjamin Lee Website</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-<link rel="stylesheet" type="text/css" href="./assets/slideshow.css">
-
-<style>
-body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
-body {font-size:16px;}
-.w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
-.w3-half img:hover{opacity:1}
- .slider {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-    }
-.slider img {
-      width: 100%; /* Make images fill the available width */
-      height: 600px; /* Set a fixed height for the images */
-      object-fit: contain; /* Maintain aspect ratio and cover the specified height */
-    }
-.prev, .next {
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: black;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-    }
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-    .prev:hover, .next:hover {
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-</style>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Benjamin Personal Site</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/943854b922.js" crossorigin="anonymous"></script>
 </head>
-<body>
-
-<!-- Sidebar/menu -->
-<nav class="w3-sidebar w3-blue-grey w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-  <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
-  <div class="w3-container">
-    <h3 class="w3-padding-64"><b>Benjamin<br>Lee</b></h3>
-     <img src="./assets/red_glasses2.jpg" style="width:100%" onclick="onClick(this)">
-  </div>
-  <div class="w3-bar-block">
-    <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a> 
-    <a href="#showcase" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Showcase</a> 
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About Me</a> 
-    <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Experience</a> 
-    <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-  </div>
-</nav>
-
-<!-- Top menu on small screens -->
-<header class="w3-container w3-top w3-hide-large w3-blue-grey w3-xlarge w3-padding">
-  <a href="javascript:void(0)" class="w3-button w3-blue-grey w3-margin-right" onclick="w3_open()">☰</a>
-  <span>Benjamin Lee Website</span>
-</header>
-
-<!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
-
-<!-- !PAGE CONTENT! -->
-<div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-  <!-- Header -->
-  <div class="w3-container" style="margin-top:80px" id="showcase">
-    <h1 class="w3-jumbo"><b>Benjamin Lee</b></h1>
-    <h1 class="w3-xxxlarge w3-text-blue"><b>Showcase</b></h1>
-    <hr style="width:50px;border:5px solid blue" class="w3-round">
-  </div>
-
-<body>
-  <div class="slider">
-    <img id="img-1" src="./assets/orbiter_v3.JPG" alt="Image 1"/>
-    <img id="img-2" src="./assets/MECH223_car.jpg" alt="Image 2"/>
-    <img id="img-3" src="./assets/robot_server.JPG" alt="Image 3"/>
-   <img id="img-4" src="./assets/cupholder_side.jpg" alt="Image 4"/>
-   <img id="img-5" src="./assets/cupholder_top.jpg" alt="Image 5"/>
-   
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
-  </div>
-  <!--<div class="navigation-button">
-    <span class="dot active" onclick="currentSlide(1)"></span>
-    <span class="dot" onclick="currentSlide(2)"></span>
-    <span class="dot" onclick="currentSlide(3)"></span>
-  </div>
-   -->
-
-  <!-- Modal for full size images on click -->
-  <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
-    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-      <img id="img01" class="w3-image">
-      <p id="caption"></p>
+<body
+<div id="header">
+  <div class="container">
+    <nav>
+      <img src="images/name_LOGO.png" class="logo">
+      <ul id="sidemenu">
+        <li><a href="#header">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <!--<li><a href="#services">Services</a></li>-->
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <i class="fas fa-times" onclick="closemenu()"></i>
+      </ul>
+      <i class="fas fa-bars" onclick="openmenu()"></i>
+    </nav>
+    <div class="header-text">
+      <p>MECHANICAL ENGINEER STUDENT</p>
+      <h1>Hi, I'm <span>Benjamin</span><br>Lee from Canada</h1>
     </div>
   </div>
-
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-      function plusSlides(n) {
-            showSlides(slideIndex += n);
-          }
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("slider")[0].getElementsByTagName('img');
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-  </script>
-</body>
-
-  <!-- Services -->
-  <div class="w3-container" id="services" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-blue"><b>About Me</b></h1>
-    <hr style="width:50px;border:5px solid blue" class="w3-round">
-    <p>I'm Benjamin Lee, a Mechanical Engineering student at the University of British Columbia (UBC) driven by a passion for innovation and a relentless pursuit of excellence. Born and raised in Vancouver, I thrive on challenges and seek opportunities to expand my horizons, whether it's through academic endeavors or an active lifestyle that includes sports like soccer and volleyball. With a strong foundation in engineering principles, honed communication skills from teamwork, and a mindset of constant improvement, I'm poised to tackle complex problems and drive technological advancements. As a member of the UBC Uncrewed Aircraft Systems (UAS) team, I contribute to designing cutting-edge concepts, reflecting my commitment to pushing boundaries. My track record of academic excellence, including a 3.95 GPA and prestigious scholarships, demonstrates my dedication to excelling in every pursuit. I'm eager to leverage my skills and passion to make a meaningful impact in the world of engineering.</p>
-    <p>In addition to my academic pursuits, I have a strong interest in technology and a desire to stay at the forefront of industry developments. My proactive approach to learning and my ability to adapt to new challenges set me apart, making me a valuable asset in any endeavor.
-    </p>
-  </div>
-  
-  <!-- Experience -->
-  <div class="w3-container" id="designers" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-blue"><b>Experience</b></h1>
-    <hr style="width:50px;border:5px solid blue" class="w3-round">
-    <p>Here are some of my skills and experience</p>
-    <p>
-      MATLAB, Python, Arduino
-    </p>
-    <p><b>Below is my resume</b>:</p>
-    <body>
-    <center>
-        <h1 style="color: blue">Resume</h1>
-        <h3>Benjamin Lee Resume</h3>
-        <object data=
-"./assets/Lee.Benjamin.Resume_021123.pdf" 
-                width="1000"
-                height="600">
-        </object>
-    </center>
-</body>
-  </div>
- 
-  <!-- Contact -->
-  <div class="w3-container" id="contact" style="margin-top:75px">
-    <h1 class="w3-xxxlarge w3-text-blue"><b>Contact</b></h1>
-    <hr style="width:50px;border:5px solid blue" class="w3-round">
-    <p>Have any questions or want to connect? Please fill out the form and I will get back to you at the earliest convenience.</p>
-    <form action="/action_page.php" target="_blank">
-      <div class="w3-section">
-        <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
+</div>
+<!--------about----------->
+<div id="about">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images/aboutMe_photo.png">
       </div>
-      <div class="w3-section">
-        <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
-      </div>
-      <div class="w3-section">
-        <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
-      </div>
-      <button type="submit" class="w3-button w3-block w3-padding-large w3-blue-grey w3-margin-bottom">Send Message</button>
-    </form>  
-  </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p>I'm Benjamin Lee, a Mechanical Engineering student at the University of British Columbia (UBC) driven by a passion for innovation and a relentless pursuit of excellence. Born and raised in Vancouver, I thrive on challenges and seek opportunities to expand my horizons, whether it's through academic endeavors or an active lifestyle that includes sports like soccer and volleyball. 
+          With a strong foundation in engineering principles, honed communication skills from teamwork, and a mindset of constant improvement, I'm poised to tackle complex problems and drive technological advancements. 
+          As a member of the UBC Uncrewed Aircraft Systems (UAS) team, I contribute to designing cutting-edge concepts, reflecting my commitment to pushing boundaries. My track record of academic excellence, including a 3.95 GPA and prestigious scholarships, demonstrates my dedication to excelling in every pursuit. 
+          I'm eager to leverage my skills and passion to make a meaningful impact in the world of engineering.
+        </p>
 
-<!-- End page content -->
+        <div class="tab-titles">
+          <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+          <p class="tab-links" onclick="opentab('experience')">Experience</p>
+          <p class="tab-links" onclick="opentab('education')">Education</p>
+        </div>
+        <!--Skills-->
+        <div class="tab-contents active-tab" id="skills">
+          <ul>
+            <li><span>CAD Software</span><br>SolidWorks, OnShape</li>
+            <li><span>Programming</span><br>MATLAB, Python, C++</li>
+            <li><span>Electronics</span><br>Arudino</li>
+          </ul>
+        </div>
+         <!--Experience-->
+        <div class="tab-contents" id="experience">
+          <ul>
+            <li><span>2023-Current</span><br>Manufacturing Engineer Intern at Escape Trailer Industries</li>
+            <li><span>2022-Current</span><br>Mechanical Payload Member at UBC UAS</li>
+          </ul>
+        </div>
+        <!--Education-->
+        <div class="tab-contents" id="education">
+          <ul>
+            <li><span>2022-Current</span><br>BASc University of British Columbia</li>
+            <li><span>2021-2022</span><br>Engineering Certificate at Langara</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!---services-->
+<!--
+<div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-list">
+      <div>
+        <h2>CAD Design</h2>
+        <p>Description for CAD Service</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <h2>Simulation</h2>
+        <p>Description for Simulation</p>
+        <a href="#">Learn more</a>
+      </div>
+      <div>
+        <h2>Manufacturing</h2>
+        <p>Description for Manu</p>
+        <a href="#">Learn more</a>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+<!--portfolio-->
+<div id="portfolio">
+  <div class="container">
+    <h1 class="sub-title">My Work</h1>
+    <div class="work-list">
+      <div class="work">
+        <img src="images/MECH223_car.png"> 
+        <div class="layer">
+          <h3>MECH 223 Project</h3>
+          <p>Final Project Car</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/posturino.png"> 
+        <div class="layer">
+          <h3>Posture-ino</h3>
+          <p>Smart posture corrector that tracks and analyzes sitting behaviour</p>
+        </div>
+      </div>
+      <div class="work">
+        <img src="images/roboCAD.png"> 
+        <div class="layer">
+          <h3>Designathon Kitchen Robot</h3>
+          <p>Kitchen robot concept</p>
+        </div>
+      </div>
+    </div>
+    <a href="images/benLee_portfolio.pdf" download class="btn">Download Portfolio</a>
+  </div>
+</div>
+<!---Contact-->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Me</h1>
+        <p><i class="fas fa-paper-plane"></i>BenL25846@gmail.com</p>
+        <!--<p><i class="fas fa-phone-square-alt"></i>778-233-2326</p>-->
+        <div class="social-icons">
+          <a href="https://www.facebook.com/jammyjam19/"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.linkedin.com/in/benjamlee/"><i class="fab fa-linkedin"></i></a>
+          <a href="https://github.com/ze11ow"><i class="fab fa-github"></i></a>
+        </div>
+        <a href="images/benLee_resume.pdf" download class="btn btn2">Download CV</a>
+      </div>
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="email" name="Email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+  <div class="copyright">
+    <p>© Copyright Benjamin Lee <script>document.write( new Date().getFullYear() );</script></p>
+  </div>
 </div>
 
-<script>
-// Script to open and close sidebar
-function w3_open() {
-  document.getElementById("mySidebar").style.display = "block";
-  document.getElementById("myOverlay").style.display = "block";
-}
- 
-function w3_close() {
-  document.getElementById("mySidebar").style.display = "none";
-  document.getElementById("myOverlay").style.display = "none";
-}
 
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
+
+
+<script>
+
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tabcontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classList.remove("active-link");
+    } 
+    for(tabcontent of tabcontents){
+      tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+
+
 </script>
 
+<script>
+  var sidemeu = document.getElementById("sidemenu");
+
+  function openmenu(){
+    sidemeu.style.right = "0";
+  }
+  function closemenu(){
+    sidemeu.style.right = "-200px";
+  }
+
+</script>
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbz0KYHzdMRekEoDVXZG_mQGaVE3O9Y52h2WYQLJlzaL6hiogydemGsifA9e8pLXN6LL/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => {
+        msg.innerHTML = "Message sent successfully"
+        setTimeout(function(){
+          msg.innerHTML = ""
+        },5000)
+        form.reset()
+      })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
 </body>
 </html>
+
